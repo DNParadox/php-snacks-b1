@@ -16,63 +16,55 @@ Stampare Nome, Cognome e la media dei voti di ogni alunno. -->
         [
             'name' => 'Pasquale',
             'lastname' => 'Aversano',
-            $votiScolastici = [
-                'scoreIta' => 6,
-                'scoreMath' => 8,
-                'scoreGeo' => 8,
+            'votiScolastici' => [
+                6,
+                8,
+                8,
             ]  
         ],
         [
             'name' => 'Luigi',
             'lastname' => 'Cardarelli',
-            $votiScolastici = [
-                'scoreIta' => 8,
-                'scoreMath' => 6,
-                'scoreGeo' => 3,
-           ]
+            'votiScolastici' => [
+                8,
+                6,
+                3,
+            ]  
         ],
         [
             'name' => 'Domenico',
             'lastname' => 'Cotugno',
-            $votiScolastici = [
-            'scoreIta' => 9,
-            'scoreMath' => 10,
-            'scoreGeo' => 8,
-            ],
+            'votiScolastici' => [
+                9,
+                10,
+                4,
+            ]  
         ],
         [
             'name' => 'Salvatore',
             'lastname' => 'Esposito',
-            $votiScolastici = [
-                'scoreIta' => 4,
-                'scoreMath' => 6,
-                'scoreGeo' => 7,
-            ],
+            'votiScolastici' => [
+                4,
+                6,
+                7,
+            ]  
         ],
-    ]
+    ];
 ?>
-
-<?php  
-
-
-?>
-
 
 <?php 
    for($i = 0; $i < count($students); $i++) {
-      
-    $somma = array_sum($votiScolastici);
-
-    $media = $somma / count($votiScolastici); 
-    ?>
-   
-   <ul> 
-    
-    <li> Nome dell'alunno: <?php echo $students['name']; ?>
-         <h2>La media è : <?php echo $media ; ?></h2></li>
-
+    $thisStudent = $students[$i];
+    $somma = array_sum($thisStudent['votiScolastici']);
+    $media = $somma / count($thisStudent['votiScolastici']); 
+?>
+   <ul>   
+    <li> 
+        <h2> Nome dell'alunno: <?php echo $thisStudent['name']; ?></h2>
+        <h3> Cognome dell'Alunno: <?php echo $thisStudent['lastname']; ?> </h3>
+        <h3> La media dell'alunno è : <?php echo $media; ?></h3>
+    </li>
    </ul>
-
 <?php } ?>
 </body>
 </html>

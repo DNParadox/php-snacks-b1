@@ -29,6 +29,7 @@ while(count($randomNumbersArray) < 15) {
 <ul>
     <!-- Facciamo un ciclo for per ottenere la stampa -->
     <?php for($i = 0; $i < count($randomNumbersArray); $i++) { ?> 
+    <?php ?> 
         <li>
             <!-- Riprendiamo l'array compilato con il ciclo while -->
             <?php echo $randomNumbersArray[$i]; ?>
