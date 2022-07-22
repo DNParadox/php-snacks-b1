@@ -19,8 +19,10 @@
         $age = $_GET['age'];
         $mail = $_GET['mail']
 
-        
+
     
     ?>
+
+    <h1> test</h1>
 </body>
 </html>
