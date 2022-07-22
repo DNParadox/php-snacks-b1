@@ -1,0 +1,11 @@
+.greysquare {
+    width: 300px;
+    height: 100px;
+    color: grey;
+}
+
+.greensquare {
+    width: 300px;
+    height: 100px;
+    color: green;
+}
