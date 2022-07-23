@@ -17,10 +17,17 @@
 
         $name = $_GET['name'];
         $age = $_GET['age'];
-        $mail = $_GET['mail']
+        $mail = $_GET['mail'];
 
 
-    
+    echo $name;
+    echo $age;
+    echo $mail;
+
+    if(strlen($_GET['name']) > 3 )
+        echo 'va tutto bene'
+
+
     ?>
 
     <h1> test</h1>
