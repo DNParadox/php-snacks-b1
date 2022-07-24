@@ -18,15 +18,13 @@
         $name = $_GET['name'];
         $age = $_GET['age'];
         $mail = $_GET['mail'];
-
-
-    echo $name;
-    echo $age;
-    echo $mail;
-
-    if(strlen($_GET['name']) > 3 )
-        echo 'va tutto bene'
-
+    // Questa condizione avrà come necessario per essere eseguita : Una @ un . in mail . il nome che contenga più di 3 caratteri e che Age sia in numero
+    
+    if(strlen($mail) > 3 && '.' && '@' && strlen($name) > 3 && is_numeric($age)) {
+        echo 'Accesso Riuscito';
+    } else {
+        echo 'Accesso Negato';
+    };
 
     ?>
 
